@@ -95,6 +95,8 @@ import java.security.GeneralSecurityException;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 
+import javax.net.ssl.SSLException;
+
 /**
  * Task which executes a given {@link DownloadInfo}: making network requests,
  * persisting data to disk, and updating {@link DownloadProvider}.
@@ -511,7 +513,8 @@ public class DownloadThread extends Thread {
                         StopRequestException.throwUnhandledHttpError(
                                 responseCode, conn.getResponseMessage());
                 }
-
+            } catch (SSLException e) {
+                throw new StopRequestException(STATUS_BAD_REQUEST, e);
             } catch (IOException e) {
                 if (e instanceof ProtocolException
                         && e.getMessage().startsWith("Unexpected status line")) {
