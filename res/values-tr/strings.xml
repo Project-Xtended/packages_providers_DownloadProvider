@@ -60,4 +60,21 @@
     <string name="download_running" msgid="3925050393361158266">"Devam ediyor"</string>
     <string name="download_error" msgid="5144180777324573236">"Başarısız"</string>
     <string name="download_running_percent" msgid="4305080769167320204">"Devam ediyor, <xliff:g id="PERCENTAGE">%s</xliff:g>"</string>
+
+    <!-- Status indicating that the download has been paused to start in the future.  Appears for an
+        individual item in the download list.  [CHAR LIMIT=24] -->
+    <string name="download_paused">Duraklat</string>
+
+    <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
+    <string name="download_paused_percent">Duraklatıldı, %d%%</string>
+
+    <!-- Text for button to manually resume all manually paused downloads [CHAR LIMIT=25] -->
+    <string name="button_resume_download">Devam et</string>
+
+    <!-- Text for button to manually manually pause all running downloads [CHAR LIMIT=25] -->
+    <string name="button_pause_download">duraklat</string>
+
+    <!-- Title summarizing paused downloads. [CHAR LIMIT=32] -->
+    <string name="notif_summary_paused">%d duraktıldı</string>
+
 </resources>
